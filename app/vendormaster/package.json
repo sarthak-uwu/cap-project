@@ -1,0 +1,10 @@
+{
+  "name": "vendormaster",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "fiori run --open webapp/index.html"
+  },
+  "devDependencies": {
+    "@sap/ux-ui5-tooling": "^1"
+  }
+}

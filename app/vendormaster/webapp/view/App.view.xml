@@ -1,0 +1,11 @@
+<mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  controllerName="vendormaster.controller.App"
+  displayBlock="true">
+
+  <App id="app">
+    <!-- Pages loaded dynamically by router via manifest.json -->
+  </App>
+
+</mvc:View>

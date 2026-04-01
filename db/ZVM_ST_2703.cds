@@ -6,4 +6,4 @@ entity VendorMaster {
       ORT01 : String(50);
       ADRNR : String(10);
       PHONE : String(15);
-}
+}   

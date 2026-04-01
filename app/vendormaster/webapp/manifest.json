@@ -1,0 +1,60 @@
+{
+  "_version": "1.58.0",
+  "sap.app": {
+    "id": "vendormaster",
+    "type": "application",
+    "title": "Vendor Master",
+    "description": "Vendor CRUD app on CAP OData v4",
+    "applicationVersion": { "version": "1.0.0" },
+    "dataSources": {
+      "VendorService": {
+        "uri": "http://localhost:4004/odata/v4/vendor/",
+        "type": "OData",
+        "settings": { "odataVersion": "4.0" }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": { "desktop": true, "tablet": true, "phone": true }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "vendormaster.view.App",
+      "type": "XML",
+      "id": "appView"
+    },
+    "dependencies": {
+      "minUI5Version": "1.108.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "vendormaster.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "transition": "slide"
+      },
+      "routes": [
+        { "pattern": "",       "name": "Home",   "target": "Home"   },
+        { "pattern": "create", "name": "Create", "target": "Create" },
+        { "pattern": "read",   "name": "Read",   "target": "Read"   },
+        { "pattern": "update", "name": "Update", "target": "Update" },
+        { "pattern": "delete", "name": "Delete", "target": "Delete" }
+      ],
+      "targets": {
+        "Home":   { "viewName": "Home",   "viewLevel": 1 },
+        "Create": { "viewName": "Create", "viewLevel": 2 },
+        "Read":   { "viewName": "Read",   "viewLevel": 2 },
+        "Update": { "viewName": "Update", "viewLevel": 2 },
+        "Delete": { "viewName": "Delete", "viewLevel": 2 }
+      }
+    }
+  }
+}

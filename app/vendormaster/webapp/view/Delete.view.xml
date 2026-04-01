@@ -1,0 +1,49 @@
+<mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:f="sap.ui.layout.form"
+  controllerName="vendormaster.controller.Delete"
+  displayBlock="true">
+
+  <Page title="Delete Vendor" showNavButton="true" navButtonPress="onNavBack">
+    <content>
+
+      <Panel class="sapUiMediumMargin">
+        <f:SimpleForm
+          editable="true"
+          layout="ResponsiveGridLayout"
+          labelSpanL="3"
+          labelSpanM="3"
+          emptySpanL="1"
+          emptySpanM="1"
+          columnsL="1"
+          columnsM="1">
+
+          <f:content>
+            <Label text="Vendor ID" required="true"/>
+            <Input id="deleteVendorId" width="50%"/>
+          </f:content>
+
+        </f:SimpleForm>
+
+        <Toolbar>
+          <ToolbarSpacer/>
+          <Button text="Delete Record" type="Negative" press="onFetch"/>
+          <ToolbarSpacer/>
+        </Toolbar>
+      </Panel>
+
+      <Panel id="previewPanel" class="sapUiMediumMargin" visible="false">
+        <VBox id="deleteResult" class="sapUiSmallMargin"/>
+        <Toolbar>
+          <ToolbarSpacer/>
+          <Button text="Confirm Delete" type="Negative" press="onConfirmDelete"/>
+          <Button text="Cancel" press="onCancel"/>
+          <ToolbarSpacer/>
+        </Toolbar>
+      </Panel>
+
+    </content>
+  </Page>
+
+</mvc:View>

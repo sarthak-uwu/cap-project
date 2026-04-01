@@ -1,0 +1,61 @@
+<mvc:View
+  controllerName="vendormaster.controller.Create"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:f="sap.ui.layout.form">
+
+  <Page
+    title="Create Vendor"
+    showNavButton="true"
+    navButtonPress=".onNavBack">
+
+    <content>
+
+      <Panel class="sapUiMediumMargin">
+
+        <f:SimpleForm
+          editable="true"
+          layout="ResponsiveGridLayout"
+          labelSpanL="3"
+          labelSpanM="3"
+          emptySpanL="1"
+          emptySpanM="1"
+          columnsL="1"
+          columnsM="1">
+
+          <f:content>
+
+            <Label text="Vendor ID" required="true"/>
+            <Input id="vendorId" maxLength="10" width="50%"/>
+
+            <Label text="Vendor Name" required="true"/>
+            <Input id="vendorName" width="50%"/>
+
+            <Label text="City"/>
+            <Input id="city" width="50%"/>
+
+            <Label text="Address Number"/>
+            <Input id="addressNumber" width="50%"/>
+
+            <Label text="Phone Number"/>
+            <Input id="phoneNumber" maxLength="15" width="50%"/>
+
+          </f:content>
+
+        </f:SimpleForm>
+
+        <Toolbar>
+          <ToolbarSpacer/>
+          <Button text="Save Vendor" type="Emphasized" press=".onSave"/>
+          <Button text="Clear" press=".onClear"/>
+          <ToolbarSpacer/>
+        </Toolbar>
+
+      </Panel>
+
+      <VBox id="tableContainer" class="sapUiMediumMargin"/>
+
+    </content>
+  </Page>
+
+</mvc:View>

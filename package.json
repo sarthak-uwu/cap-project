@@ -8,11 +8,21 @@
     "express": "^4"
   },
   "devDependencies": {
-    "@cap-js/sqlite": "^2"
+    "@cap-js/sqlite": "^2",
+    "@sap/ux-ui5-tooling": "^1"
   },
   "scripts": {
     "start": "cds-serve"
   },
   "private": true,
-  "cds": {}
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db/db.sqlite"
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,59 @@
+<mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:f="sap.ui.layout.form"
+  controllerName="vendormaster.controller.Update"
+  displayBlock="true">
+
+  <Page title="Update Vendor" showNavButton="true" navButtonPress="onNavBack">
+    <content>
+
+      <Panel class="sapUiMediumMargin">
+        <f:SimpleForm
+          editable="true"
+          layout="ResponsiveGridLayout"
+          labelSpanL="3"
+          labelSpanM="3"
+          emptySpanL="1"
+          emptySpanM="1"
+          columnsL="1"
+          columnsM="1">
+
+          <f:content>
+            <Label text="Vendor ID" required="true"/>
+            <Input id="updateLookupId" width="50%"/>
+          </f:content>
+
+        </f:SimpleForm>
+
+        <Toolbar>
+          <ToolbarSpacer/>
+          <Button text="Load Record" type="Emphasized" press="onLoad"/>
+          <ToolbarSpacer/>
+        </Toolbar>
+      </Panel>
+
+      <Panel id="editPanel" class="sapUiMediumMargin" visible="false">
+        <f:SimpleForm
+          id="updateFormContainer"
+          editable="true"
+          layout="ResponsiveGridLayout"
+          labelSpanL="3"
+          labelSpanM="3"
+          emptySpanL="1"
+          emptySpanM="1"
+          columnsL="1"
+          columnsM="1">
+        </f:SimpleForm>
+
+        <Toolbar>
+          <ToolbarSpacer/>
+          <Button text="Save Changes" type="Emphasized" press="onSave"/>
+          <ToolbarSpacer/>
+        </Toolbar>
+      </Panel>
+
+    </content>
+  </Page>
+
+</mvc:View>

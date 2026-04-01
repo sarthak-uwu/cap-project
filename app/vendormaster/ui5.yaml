@@ -1,0 +1,16 @@
+specVersion: "3.0"
+metadata:
+  name: vendormaster
+type: application
+resources:
+  configuration:
+    paths:
+      webapp: webapp
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        backend:
+          - path: /odata/v4/vendor
+            url: http://localhost:4004

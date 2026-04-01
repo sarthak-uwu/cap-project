@@ -1,0 +1,35 @@
+<mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:f="sap.f"
+  controllerName="vendormaster.controller.Home"
+  displayBlock="true">
+
+  <Page title="Vendor Master" showHeader="true">
+    <content>
+      <VBox alignItems="Center" justifyContent="Center" class="sapUiMediumMarginTop">
+
+        <Title text="Vendor Master Management" level="H1" class="sapUiMediumMarginBottom"/>
+        <Text text="Select an operation to manage vendor records" class="sapUiSmallMarginBottom"/>
+
+        <HBox justifyContent="Center" wrap="Wrap" class="sapUiMediumMarginTop">
+
+          <VBox class="sapUiSmallMargin">
+            <Button text="Create Vendor" type="Emphasized" icon="sap-icon://add"    width="180px" press="onNavigate('Create')" />
+          </VBox>
+          <VBox class="sapUiSmallMargin">
+            <Button text="Read Vendor"   type="Default"    icon="sap-icon://search" width="180px" press="onNavigate('Read')" />
+          </VBox>
+          <VBox class="sapUiSmallMargin">
+            <Button text="Update Vendor" type="Attention"  icon="sap-icon://edit"   width="180px" press="onNavigate('Update')" />
+          </VBox>
+          <VBox class="sapUiSmallMargin">
+            <Button text="Delete Vendor" type="Negative"   icon="sap-icon://delete" width="180px" press="onNavigate('Delete')" />
+          </VBox>
+
+        </HBox>
+      </VBox>
+    </content>
+  </Page>
+
+</mvc:View>
